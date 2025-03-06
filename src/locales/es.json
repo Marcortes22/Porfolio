@@ -1,0 +1,127 @@
+{
+  "head": {
+    "lang": "es",
+    "title": "Portafolio de Marco Cortés",
+    "description": "Soy un estudiante de último año de Ingeniería en Sistemas con experiencia en desarrollo web, frontend y backend. Trabajo con tecnologías como Astro, React, TypeScript y NestJS.",
+    "author": "Marco Cortés Castillo",
+    "keywords": [
+      "Ingeniería en Sistemas",
+      "Desarrollo Web",
+      "Astro.js",
+      "React Developer",
+      "Full Stack Developer",
+      "Frontend y Backend",
+      "Tailwind",
+      "TypeScript"
+    ],
+    "url": "https://marcortes.dev/"
+  },
+  "nav": {
+    "navLinks": [
+      {
+        "name": "Inicio",
+        "hash": "#home"
+      },
+      {
+        "name": "Sobre mí",
+        "hash": "#about-me"
+      },
+      {
+        "name": "Proyectos",
+        "hash": "#projects"
+      },
+      {
+        "name": "Skills",
+        "hash": "#skills"
+      }
+    ]
+  },
+
+  "secctions": [
+    {
+      "aboutMeSection": {
+        "image": "@Assets/Diplomado.jpg",
+        "title": "Marco Cortés Castillo",
+        "paragraphs": [
+          "Soy un <strong class='text-blue-700 dark:text-orange-500'>joven y apasionado</strong> estudiante de último año de <strong class='text-green-700 dark:text-blue-500'>Ingeniería en Sistemas de Información</strong>, con un fuerte interés en el desarrollo, tanto <strong class='text-purple-500 dark:text-orange-500'>frontend</strong> como <strong class='text-indigo-700 dark:text-orange-500'>backend</strong>. Me considero una persona <strong class='text-orange-700 dark:text-violet-500'>autodidacta</strong>, con una gran capacidad de <strong class='text-blue-700 dark:text-orange-500'>pensamiento crítico</strong> y resolución de problemas. Me encanta <strong class='text-green-700 dark:text-blue-500'>explorar nuevas tecnologías</strong>, construir <strong class='text-orange-700 dark:text-orange-500'>soluciones innovadoras</strong> y aprender de cada <span class='bg-gray-200 dark:bg-gray-700 px-1 rounded'>desafío que enfrento</span>.",
+
+          "Siempre busco oportunidades para <strong class='text-green-700 dark:text-orange-500'>mejorar mis habilidades</strong> y colaborar en proyectos que me permitan <strong class='text-blue-700 dark:text-blue-500'>crecer tanto profesional como personalmente</strong>."
+        ],
+
+        "contactWays": [
+          {
+            "name": "Gmail",
+            "link": "mailto:marcortes.stiven@gmail.com?subject=Consulta&body=Hola, quiero saber más sobre tu trabajo!",
+            "icon": "/socialMediaIcons/gmail.svg"
+          },
+          {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/marco-cort%C3%A9s-2b837b228/",
+            "icon": "/socialMediaIcons/linkedin.svg"
+          },
+          {
+            "name": "GitHub",
+            "link": "https://github.com/Marcortes22",
+            "icon": "/socialMediaIcons/github-dark.svg"
+          }
+        ],
+        "myCV": {
+          "name": "Mi CV",
+          "link": "/cv/spanishCV.pdf",
+          "icon": "/socialMediaIcons/pdf.svg"
+        }
+      }
+    },
+    {
+      "projectsSection": {
+        "sectionTitle": "Proyectos",
+        "projects": [
+          {
+            "title": "Clon de Microsoft To Do",
+            "tecnicDescription": {
+              "title": "Descripcion tecnica",
+              "description": "Aplicación web para la gestión de tareas inspirada en Microsoft To Do. El frontend fue desarrollado con React y TypeScript, utilizando TaskTack Query para la gestión de datos, Auth0 para la autenticación y Material UI (MUI) para la interfaz. En el backend, se implementó una API con .NET Web API, aplicando patrones como Repository Pattern, Unit of Work y CQRS con MediatR y Entity Framework. La base de datos utilizada es PostgreSQL. Todo el backend y la base de datos están desplegados en Railway, mientras que el frontend se encuentra en Vercel.",
+              "itemsDescription": [
+                "Frontend: React, TypeScript, TaskTack Query, Auth0, Material UI (MUI)",
+                "Backend: .NET Web API, Repository Pattern, Unit of Work Pattern, CQRS, MediatR, Entity Framework",
+                "Base de datos: PostgreSQL",
+                "Despliegue: Railway (backend y base de datos), Vercel (frontend)"
+              ]
+            },
+            "useDescription": {
+              "title": "Descripcion de la applicacion",
+              "description": "Cada usuario puede crear y gestionar múltiples listas de tareas personalizadas, permitiendo agregar, editar y eliminar tanto listas como las tareas dentro de ellas. Cada tarea incluye atributos como título, importancia, estado de completado, notas y fecha límite. Además de las listas personalizadas, la aplicación ofrece listas predeterminadas para una mejor organización y acceso rápido:",
+              "itemsDescription": [
+                "Tareas del día: Las tareas añadidas aquí permanecen por 24 horas.",
+                "Importante: Agrupa tareas marcadas como importantes.",
+                "Planeado: Contiene tareas con una fecha límite establecida.",
+                "Completado: Muestra todas las tareas finalizadas.",
+                "Todas las tareas: Muestra todas las tareas, independientemente de su estado y lista."
+              ]
+            },
+            "technologies": [
+              "React",
+              "TypeScript",
+              "dotnet",
+              "auth0",
+              "postgresql"
+            ],
+            "images": [
+              "projectImages/taskManager/taskManager1.webp",
+              "projectImages/taskManager/taskManager2.webp",
+              "projectImages/taskManager/taskManager3.webp",
+              "projectImages/taskManager/taskManager4.webp",
+              "projectImages/taskManager/taskManager5.webp",
+              "projectImages/taskManager/taskManager6.webp"
+            ],
+            "links": {
+              "frontend": "",
+              "backend": "",
+              "demo": "https://www.marcortes.dev/"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

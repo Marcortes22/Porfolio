@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import principalIcon from '@Assets/Diplomado.jpg';
+import getTranslation from 'src/helpers/getTranslation';
+
+const currentLocale = getTranslation(Astro.url.pathname);
+const { secctions } = currentLocale;
+const { aboutMeSection } = secctions[0];
+---
+
+{
+  aboutMeSection && (
+    <section class="flex flex-col items-center justify-center w-full text-center">
+      <header class="not-prose flex items-center flex-col mt-3 relative p-4 rounded-lg">
+        <Image
+          src={principalIcon}
+          alt="My photo."
+          class="w-30 h-30 rounded-full object-cover"
+        />
+      </header>
+
+      <main id="about-me" class="prose prose-lg">
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100">
+          {aboutMeSection.title}
+        </h2>
+        {aboutMeSection.paragraphs.map((paragraph, index) => (
+          <p
+            data-key={index}
+            set:html={paragraph}
+            class="text-lg text-gray-600 dark:text-gray-300"
+          />
+        ))}
+
+        <div
+          id="contact"
+          class="not-prose flex gap-4 items-center justify-center w-full flex-wrap scroll-mt-20"
+        >
+          {aboutMeSection.contactWays.map((item, index) => (
+            <a
+              href={item.link}
+              data-key={index}
+              class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] w-[115px]"
+            >
+              <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span class="inline-flex gap-3 h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-300 dark:bg-slate-950 px-3 py-1 text-sm font-medium dark:text-white backdrop-blur-3xl hover:bg-slate-400 dark:hover:bg-slate-900">
+                <img src={item.icon} class="w-[26px] h-[26px]" />
+                <p>{item.name}</p>
+              </span>
+            </a>
+          ))}
+
+          <a
+            href={aboutMeSection.myCV.link}
+            class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] w-[115px]"
+          >
+            <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span class="inline-flex gap-3 h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-300 dark:bg-slate-950 px-3 py-1 text-sm font-medium dark:text-white backdrop-blur-3xl  hover:bg-slate-400 dark:hover:bg-slate-900">
+              <img src={aboutMeSection.myCV.icon} class="w-[26px] h-[26px]" />
+              {aboutMeSection.myCV.name}
+            </span>
+          </a>
+        </div>
+      </main>
+    </section>
+  )
+}

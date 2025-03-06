@@ -1,0 +1,124 @@
+{
+  "head": {
+    "lang": "en",
+    "title": "Marco Cortés Portfolio",
+    "description": "I am a final-year Computer Engineering student with experience in web development, frontend, and backend. I work with technologies like Astro, React, TypeScript, and NestJS.",
+    "author": "Marco Cortés Castillo",
+    "keywords": [
+      "Computer Engineering",
+      "Web Development",
+      "Astro.js",
+      "React Developer",
+      "Full Stack Developer",
+      "Frontend and Backend",
+      "Tailwind",
+      "TypeScript"
+    ],
+    "url": "https://marcortes.dev/en"
+  },
+  "nav": {
+    "navLinks": [
+      {
+        "name": "Home",
+        "hash": "#home"
+      },
+      {
+        "name": "About",
+        "hash": "#about-me"
+      },
+      {
+        "name": "Projects",
+        "hash": "#projects"
+      },
+      {
+        "name": "Skills",
+        "hash": "#skills"
+      }
+    ]
+  },
+  "secctions": [
+    {
+      "aboutMeSection": {
+        "image": "@Assets/Diplomado.jpg",
+        "title": "Marco Cortés Castillo",
+        "paragraphs": [
+          "I am a young and passionate senior student in Software Engineering who is deeply interested in both frontend and backend development. I consider myself a self-taught individual with strong critical thinking and problem-solving skills. I love exploring new technologies, building innovative solutions, and learning from every challenge I encounter.",
+          "I am always looking for opportunities to improve my skills and collaborate on projects that allow me to grow both professionally and personally."
+        ],
+        "contactWays": [
+          {
+            "name": "Gmail",
+            "link": "mailto:marcortes.stiven@gmail.com?subject=Inquiry&body=Hello, I would like to know more about your work!",
+            "icon": "/socialMediaIcons/gmail.svg"
+          },
+          {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/marco-cort%C3%A9s-2b837b228/",
+            "icon": "/socialMediaIcons/linkedin.svg"
+          },
+          {
+            "name": "GitHub",
+            "link": "https://github.com/Marcortes22",
+            "icon": "/socialMediaIcons/github-dark.svg"
+          }
+        ],
+        "myCV": {
+          "name": "My CV",
+          "link": "/CV/MarcoCortesCV.pdf",
+          "icon": "/socialMediaIcons/pdf.svg"
+        }
+      }
+    },
+    {
+      "projectsSection": {
+        "sectionTitle": "Projects",
+        "projects": [
+          {
+            "title": "Microsoft To Do Clone",
+            "tecnicDescription": {
+              "title": "Technical Description",
+              "description": "Web application for task management inspired by Microsoft To Do. The frontend was developed using React and TypeScript, with TaskTack Query for data management, Auth0 for authentication, and Material UI (MUI) for the interface. The backend was built with .NET Web API, implementing design patterns such as Repository Pattern, Unit of Work, and CQRS with MediatR and Entity Framework. The database used is PostgreSQL. The backend and database are hosted on Railway, while the frontend is deployed on Vercel.",
+              "itemsDescription": [
+                "Frontend: React, TypeScript, TaskTack Query, Auth0, Material UI (MUI)",
+                "Backend: .NET Web API, Repository Pattern, Unit of Work Pattern, CQRS, MediatR, Entity Framework",
+                "Database: PostgreSQL",
+                "Deployment: Railway (backend and database), Vercel (frontend)"
+              ]
+            },
+            "useDescription": {
+              "title": "Application Description",
+              "description": "Each user can create and manage multiple personalized task lists, allowing them to add, edit, and delete both lists and the tasks within them. Each task includes attributes such as title, importance, completion status, notes, and a due date. In addition to custom lists, the application provides default lists for better organization and quick access:",
+              "itemsDescription": [
+                "My Day: Tasks added here remain for 24 hours.",
+                "Important: Groups tasks marked as important.",
+                "Planned: Contains tasks with a set due date.",
+                "Completed: Displays all finished tasks.",
+                "All Tasks: Shows all tasks, regardless of their status or list."
+              ]
+            },
+            "technologies": [
+              "React",
+              "TypeScript",
+              "dotnet",
+              "auth0",
+              "postgresql"
+            ],
+            "images": [
+              "/projectImages/taskManager/taskManager1.webp",
+              "/projectImages/taskManager/taskManager2.webp",
+              "/projectImages/taskManager/taskManager3.webp",
+              "/projectImages/taskManager/taskManager4.webp",
+              "/projectImages/taskManager/taskManager5.webp",
+              "/projectImages/taskManager/taskManager6.webp"
+            ],
+            "links": {
+              "frontend": "",
+              "backend": "",
+              "demo": "https://www.marcortes.dev/"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

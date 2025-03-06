@@ -1,0 +1,54 @@
+---
+import ChangeThemeButton from '@Components/React/ChangeThemeButton/ChangeThemeButton';
+import { Image } from 'astro:assets';
+import Icon from '@Assets/astro.svg';
+import getTranslation from 'src/helpers/getTranslation';
+import ChangeLanguageSelect from '@Components/React/ChangeLanguageSelect/ChangeLanguageSelect';
+export const prerender = true;
+const { pathname } = Astro.url;
+const currentLocale = getTranslation(pathname);
+const root = Astro.currentLocale === 'en' ? '/en' : '/';
+console.log(Astro.currentLocale);
+// console.log(Astro.url);
+// console.log(Astro.originPathname);
+
+const { nav } = currentLocale;
+---
+
+<header
+  class="fixed top-0 left-0 right-0 h-[64px] min-h-[64px] w-[100%] flex flex-wrap justify-between py-1 px-4 sm:px-6 items-center z-50 border border-gray-300 dark:border-neutral-800 rounded bg-gray-100 dark:bg-violet-950"
+>
+  <ChangeThemeButton client:only="react">
+    <div class="" slot="fallback">cargando...</div>
+  </ChangeThemeButton>
+
+  <nav
+    id="navbar"
+    class="hidden transition-transform p-4 sm:block sm:translate-y-0 sm:static sm:p-0 w-full sm:w-auto text-sm lg:text-base"
+  >
+    <ul
+      class="flex flex-col items-center gap-4 lg:gap-8 border border-dashed border-gray-500 rounded-md font-semibold text-gray-500 p-4 sm:p-2 sm:border-none sm:flex-row text-[16px]"
+    >
+      {
+        nav.navLinks.map((navItem, i) => (
+          <li>
+            <a
+              href={navItem.hash}
+              class="hover:text-gray-950 dark:hover:text-white dark:text-gray-400"
+            >
+              {navItem.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <ChangeLanguageSelect
+    currentLocale={Astro.currentLocale ?? 'es'}
+    client:only="react"
+  >
+    <div class="" slot="fallback">cargando...</div></ChangeLanguageSelect
+  >
+  <!-- <Test /> -->
+</header>

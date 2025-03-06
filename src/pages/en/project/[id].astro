@@ -1,0 +1,14 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+export const prerender = false;
+const { id } = Astro.params;
+console.log(id);
+const languaje = Astro.url.pathname.includes('/en') ? 'en' : 'es';
+const singleProjectUrl = getRelativeLocaleUrl(languaje);
+import Layout from '@Layouts/Layout.astro';
+---
+
+<Layout>
+  <h1>{id}</h1>
+  <a href={singleProjectUrl}> regresar al inicio</a>
+</Layout>
