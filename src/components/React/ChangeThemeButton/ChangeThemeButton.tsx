@@ -7,7 +7,7 @@ import createCache from '@emotion/cache';
 export default function ChangeThemeButton() {
   const { changeThemeButton } = useChangeThemeButton();
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const cache = createCache({ key: 'mui', prepend: true });
+  const cache = createCache({ key: 'ChangeThemeButton', prepend: true });
   useEffect(() => {
     const checkDarkMode = () => {
       const theme = document.documentElement.getAttribute('data-theme');

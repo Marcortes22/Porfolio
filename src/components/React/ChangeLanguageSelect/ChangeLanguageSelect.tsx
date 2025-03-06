@@ -3,6 +3,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import '/node_modules/flag-icons/css/flag-icons.min.css';
 import { useState, useEffect } from 'react';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
 
 interface Props {
   currentLocale: string;
@@ -10,7 +12,7 @@ interface Props {
 
 export default function ChangeLanguageSelect({ currentLocale }: Props) {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const cache = createCache({ key: 'ChangeLanguageSelect', prepend: true });
   useEffect(() => {
     const checkDarkMode = () => {
       const theme = document.documentElement.getAttribute('data-theme');
@@ -69,35 +71,41 @@ export default function ChangeLanguageSelect({ currentLocale }: Props) {
   };
 
   return (
-    <Select
-      sx={{
-        '& .MuiOutlinedInput-notchedOutline': {
-          border: 'none', // 🔹 Elimina el borde del select
-        },
-        '& .MuiSelect-icon': {
-          color: isDarkMode ? 'white' : 'black', // 🔹 Cambia el borde en modo oscuro
-        },
-      }}
-      value={currentLanguage?.code}
-      onChange={handleChange}
-      className="text-white border-none"
-      displayEmpty
-      renderValue={(value) => {
-        const selectedLang = languages.find((lang) => lang.code === value);
-        return (
-          <div className="flex items-center gap-2 dark:text-white border-none">
-            <span className={`fi fi-${value}`}></span>
-            {selectedLang?.label}
-          </div>
-        );
-      }}
-    >
-      {languages.map((lang) => (
-        <MenuItem key={lang.code} value={lang.code} className="dark:text-white">
-          <span className={`fi fi-${lang.code} mr-2`}></span>
-          {lang.label}
-        </MenuItem>
-      ))}
-    </Select>
+    <CacheProvider value={cache}>
+      <Select
+        sx={{
+          '& .MuiOutlinedInput-notchedOutline': {
+            border: 'none', // 🔹 Elimina el borde del select
+          },
+          '& .MuiSelect-icon': {
+            color: isDarkMode ? 'white' : 'black', // 🔹 Cambia el borde en modo oscuro
+          },
+        }}
+        value={currentLanguage?.code}
+        onChange={handleChange}
+        className="text-white border-none"
+        displayEmpty
+        renderValue={(value) => {
+          const selectedLang = languages.find((lang) => lang.code === value);
+          return (
+            <div className="flex items-center gap-2 dark:text-white border-none">
+              <span className={`fi fi-${value}`}></span>
+              {selectedLang?.label}
+            </div>
+          );
+        }}
+      >
+        {languages.map((lang) => (
+          <MenuItem
+            key={lang.code}
+            value={lang.code}
+            className="dark:text-white"
+          >
+            <span className={`fi fi-${lang.code} mr-2`}></span>
+            {lang.label}
+          </MenuItem>
+        ))}
+      </Select>
+    </CacheProvider>
   );
 }

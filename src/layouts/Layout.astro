@@ -9,11 +9,7 @@ const currentLocale = getTranslation(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html
-  data-theme="dark"
-  class="m-0 w-full h-full"
-  lang={currentLocale.head.lang}
->
+<html data-theme class="m-0 w-full h-full" lang={currentLocale.head.lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -64,7 +60,7 @@ const currentLocale = getTranslation(Astro.url.pathname);
     <main class="grow w-[85%] mt-[64px]">
       <slot />
     </main>
-    <FooterPage />
+    <FooterPage transition:persist />
 
     <img
       class="fixed hidden top-0 left-0 size-full -z-10 blur-2xl opacity-100 dark:block"

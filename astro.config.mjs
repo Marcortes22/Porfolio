@@ -23,6 +23,7 @@ export default defineConfig({
         '@mui/system',
         '@mui/utils',
         '@mui/styled-engine',
+        '@mui/styled-engine-sc',
         '@emotion/react',
         '@emotion/styled',
       ],
