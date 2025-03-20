@@ -1,0 +1,24 @@
+---
+interface Props {
+  buttonLink: string;
+  buttonText: string;
+  buttonIcon: string;
+}
+
+const { buttonLink, buttonText, buttonIcon } = Astro.props;
+---
+
+<a
+  href={buttonLink}
+  class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] w-[115px]"
+>
+  <span
+    class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+  ></span>
+  <span
+    class="inline-flex gap-3 h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-300 dark:bg-slate-950 px-3 py-1 text-sm font-medium dark:text-white backdrop-blur-3xl hover:bg-slate-400 dark:hover:bg-slate-900"
+  >
+    <img src={buttonIcon} class="w-[26px] h-[26px] text-black" />
+    <p>{buttonText}</p>
+  </span>
+</a>

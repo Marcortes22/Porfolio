@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import principalIcon from '@Assets/Diplomado.jpg';
 import getTranslation from 'src/helpers/getTranslation';
-
+import ShinyButton from '@Components/Astro/ShinyButton/ShinyButton.astro';
 const currentLocale = getTranslation(Astro.url.pathname);
 const { secctions } = currentLocale;
 const { aboutMeSection } = secctions[0];
@@ -36,17 +36,12 @@ const { aboutMeSection } = secctions[0];
           class="not-prose flex gap-4 items-center justify-center w-full flex-wrap scroll-mt-20"
         >
           {aboutMeSection.contactWays.map((item, index) => (
-            <a
-              href={item.link}
+            <ShinyButton
               data-key={index}
-              class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] w-[115px]"
-            >
-              <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-              <span class="inline-flex gap-3 h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-300 dark:bg-slate-950 px-3 py-1 text-sm font-medium dark:text-white backdrop-blur-3xl hover:bg-slate-400 dark:hover:bg-slate-900">
-                <img src={item.icon} class="w-[26px] h-[26px]" />
-                <p>{item.name}</p>
-              </span>
-            </a>
+              buttonLink={item.link}
+              buttonText={item.name}
+              buttonIcon={item.icon}
+            />
           ))}
 
           <a

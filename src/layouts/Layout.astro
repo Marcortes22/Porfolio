@@ -4,12 +4,12 @@ import background from '@Assets/backgrounds/darkBackground.svg';
 import getTranslation from '@Helpers/getTranslation';
 import NavBar from '@Components/Astro/NavBar/NavBar.astro';
 import FooterPage from '@Components/Astro/FooterPage/FooterPage.astro';
-import { ClientRouter } from 'astro:transitions';
 const currentLocale = getTranslation(Astro.url.pathname);
+const navLinksVisible = Astro.url.pathname.includes('/project') ? false : true;
 ---
 
 <!doctype html>
-<html data-theme class="m-0 w-full h-full" lang={currentLocale.head.lang}>
+<html data-theme lang={currentLocale.head.lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -50,14 +50,27 @@ const currentLocale = getTranslation(Astro.url.pathname);
     <meta name="twitter:title" content={currentLocale.head.title} />
     <meta name="twitter:description" content={currentLocale.head.description} />
     <meta name="twitter:image" content="/Porfolio.png" />
-    <ClientRouter />
+    <!-- <ClientRouter /> -->
+    <script>
+      document.addEventListener('astro:after-swap', () => {
+        const localStorageTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', localStorageTheme);
+        console.log('astro:after-swap');
+      });
+    </script>
+    <script>
+      (function () {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
   </head>
   <body
     id="home"
     class="flex flex-col items-center text-black dark:bg-gray-950 dark:text-white h-full m-0 w-full"
   >
-    <NavBar transition:persist />
-    <main class="grow w-[85%] mt-[64px]">
+    <NavBar visible={navLinksVisible} transition:persist />
+    <main class="grow sm:w-[85%] w-[95%] mt-[64px]">
       <slot />
     </main>
     <FooterPage transition:persist />
@@ -74,7 +87,10 @@ const currentLocale = getTranslation(Astro.url.pathname);
       alt="background image"
       fetchpriority="high"
     /> -->
-  </body>
+  </body><script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+  ></script>
 </html>
 
 <style>
@@ -82,19 +98,6 @@ const currentLocale = getTranslation(Astro.url.pathname);
   body {
     scroll-behavior: smooth;
     overflow: visible;
+    height: 100dvh;
   }
 </style>
-<script>
-  const htmlThemeAtribute = document.documentElement.getAttribute('data-theme');
-
-  const localStorageTheme = localStorage.theme;
-
-  if (localStorageTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else if (localStorageTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-  }
-</script>

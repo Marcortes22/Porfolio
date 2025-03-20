@@ -1,14 +1,12 @@
 ---
-import NavBar from '@Components/Astro/NavBar/NavBar.astro';
 import Layout from '@Layouts/Layout.astro';
 export const prerender = true;
 import SkillsSection from '@Components/Astro/SkillsSection/SkillsSection.astro';
 import AboutMeSection from '@Components/Astro/AboutMeSection/AboutMeSection.astro';
 import ProjectsSection from '@Components/Astro/ProjectsSection/ProjectsSection.astro';
-import FooterPage from '@Components/Astro/FooterPage/FooterPage.astro';
 ---
 
-<Layout>
+<Layout transition:persist>
   <AboutMeSection />
   <ProjectsSection />
   <SkillsSection />

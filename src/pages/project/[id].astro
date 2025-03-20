@@ -2,37 +2,90 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import getTranslation from 'src/helpers/getTranslation';
 import Layout from '@Layouts/Layout.astro';
-
+import Carousel from '@Components/Astro/Carousel/Carousel.astro';
 export const prerender = false;
+
 const { id } = Astro.params;
-
 const languaje = Astro.url.pathname.includes('/en') ? 'en' : 'es';
-
+const projectId = Number(id) ?? 0;
 const currentLocale = getTranslation(Astro.url.pathname);
 const singleProjectUrl = getRelativeLocaleUrl(languaje);
 const { secctions } = currentLocale;
 const { projectsSection } = secctions[1] || {};
-const project = projectsSection?.projects?.[Number(id)] || {};
+const project = projectsSection?.projects?.[projectId];
+import ShinyButton from '@Components/Astro/ShinyButton/ShinyButton.astro';
 ---
 
-<Layout>
-  <div class="w-full h-full flex items-start justify-around">
-    <div>
-      <a href={singleProjectUrl}> regresar al inicio</a>
-      <img
-        class="h-[150px]
-    w-[200px]
-    object-contain
-    rounded-lg"
-        transition:name={`projectImage${id}`}
-        src={`../${project.images[0]}`}
-        alt=""
-      />
-    </div>
-    <h3
-      class="text-2xl font-bold text-gray-800 dark:text-gray-100 cursor-default"
-    >
-      {project.title}
-    </h3>
-  </div>
-</Layout>
+{
+  project && (
+    <Layout transition:persist>
+      <a
+        class="inline-block mt-5  px-2 py-2 rounded-md font-semibold shadow transition-colors duration-300 bg-gray-200 border-gray-300 text-gray-800 hover:bg-gray-100  dark:bg-violet-800 dark:text-white dark:hover:bg-violet-950"
+        href={`${singleProjectUrl}#projects`}
+      >
+        Regresar al inicio
+      </a>
+      <div class="w-full h-full flex flex-col lg:flex-row justify-start sm:justify-between sm:items-start items-center gap-10 py-4">
+        <div class="flex flex-col w-full flex-1 items-center gap-5 ">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 cursor-default text-center">
+            {project.title}
+          </h3>
+
+          <Carousel images={project.images} client:load />
+
+          <div class="flex gap-1 mt-[35px] w-full justify-center">
+            <ShinyButton
+              buttonLink={project.links.frontend}
+              buttonText={'Frontend'}
+              buttonIcon={'/socialMediaIcons/github-dark.svg'}
+            />
+            <ShinyButton
+              buttonLink={project.links.demo}
+              buttonText={'Demo'}
+              buttonIcon={'/socialMediaIcons/Vercel_wordmark_dark.svg'}
+            />
+            <ShinyButton
+              buttonLink={project.links.backend}
+              buttonText={'Backend'}
+              buttonIcon={'/socialMediaIcons/github-dark.svg'}
+            />
+          </div>
+          <div />
+        </div>
+        <div class="flex flex-col flex-1 w-full  items-center justify-center ">
+          <div class="prose prose-ul:mt-0 dark:prose-headings:text-white dark:text-white ">
+            <div class="flex items-center justify-center gap-5">
+              <p class="text-lg">Mi rol: </p>
+              <p class="px-2 py-1 bg-gray-200 dark:bg-violet-900 rounded">
+                {project.myRole}
+              </p>
+            </div>
+            <p class="text-center lg:text-left">
+              {project.useDescription.title}
+            </p>
+            <p class="text-center lg:text-left">
+              {project.useDescription.description}
+            </p>
+            <ul>
+              {project.useDescription.itemsDescription.map((item, index) => (
+                <li data-key={index}>{item}</li>
+              ))}
+            </ul>
+            <h3 class="text-center lg:text-left">
+              {project.tecnicDescription.title}
+            </h3>
+            <p class="text-center lg:text-left">
+              {project.tecnicDescription.description}
+            </p>
+
+            <ul>
+              {project.tecnicDescription.itemsDescription.map((item, index) => (
+                <li data-key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}

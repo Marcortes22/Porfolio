@@ -42,8 +42,8 @@
         "image": "@Assets/Diplomado.jpg",
         "title": "Marco Cortés Castillo",
         "paragraphs": [
-          "I am a young and passionate senior student in Software Engineering who is deeply interested in both frontend and backend development. I consider myself a self-taught individual with strong critical thinking and problem-solving skills. I love exploring new technologies, building innovative solutions, and learning from every challenge I encounter.",
-          "I am always looking for opportunities to improve my skills and collaborate on projects that allow me to grow both professionally and personally."
+          "I am a <strong class='text-blue-700 dark:text-orange-500'>young and passionate</strong> senior student in <strong class='text-green-700 dark:text-blue-500'>Software Engineering</strong> who is deeply interested in both <strong class='text-purple-500 dark:text-orange-500'>frontend</strong> and <strong class='text-indigo-700 dark:text-orange-500'>backend</strong> development. I consider myself a <strong class='text-orange-700 dark:text-violet-500'>self-taught</strong> individual with strong <strong class='text-blue-700 dark:text-orange-500'>critical thinking</strong> and problem-solving skills. I love <strong class='text-green-700 dark:text-blue-500'>exploring new technologies</strong>, building <strong class='text-orange-700 dark:text-orange-500'>innovative solutions</strong>, and learning from <span class='bg-gray-200 dark:bg-gray-700 px-1 rounded'>every challenge I encounter</span>.",
+          "I am always looking for opportunities to <strong class='text-green-700 dark:text-orange-500'>improve my skills</strong> and collaborate on projects that allow me to <strong class='text-blue-700 dark:text-blue-500'>grow both professionally and personally</strong>."
         ],
         "contactWays": [
           {
@@ -75,6 +75,7 @@
         "projects": [
           {
             "title": "Microsoft To Do Clone",
+            "myRole": "Full Stack Developer",
             "tecnicDescription": {
               "title": "Technical Description",
               "description": "Web application for task management inspired by Microsoft To Do. The frontend was developed using React and TypeScript, with TaskTack Query for data management, Auth0 for authentication, and Material UI (MUI) for the interface. The backend was built with .NET Web API, implementing design patterns such as Repository Pattern, Unit of Work, and CQRS with MediatR and Entity Framework. The database used is PostgreSQL. The backend and database are hosted on Railway, while the frontend is deployed on Vercel.",
@@ -112,8 +113,8 @@
               "/projectImages/taskManager/taskManager6.webp"
             ],
             "links": {
-              "frontend": "",
-              "backend": "",
+              "frontend": "https://github.com/Marcortes22/FrontEndTaskManager",
+              "backend": "https://github.com/Marcortes22/BackEndTaskManager",
               "demo": "https://www.marcortes.dev/"
             }
           }
