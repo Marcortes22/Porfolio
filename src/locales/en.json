@@ -39,7 +39,6 @@
   "secctions": [
     {
       "aboutMeSection": {
-        "image": "@Assets/Diplomado.jpg",
         "title": "Marco Cortés Castillo",
         "paragraphs": [
           "I am a <strong class='text-blue-700 dark:text-orange-500'>young and passionate</strong> senior student in <strong class='text-green-700 dark:text-blue-500'>Software Engineering</strong> who is deeply interested in both <strong class='text-purple-500 dark:text-orange-500'>frontend</strong> and <strong class='text-indigo-700 dark:text-orange-500'>backend</strong> development. I consider myself a <strong class='text-orange-700 dark:text-violet-500'>self-taught</strong> individual with strong <strong class='text-blue-700 dark:text-orange-500'>critical thinking</strong> and problem-solving skills. I love <strong class='text-green-700 dark:text-blue-500'>exploring new technologies</strong>, building <strong class='text-orange-700 dark:text-orange-500'>innovative solutions</strong>, and learning from <span class='bg-gray-200 dark:bg-gray-700 px-1 rounded'>every challenge I encounter</span>.",

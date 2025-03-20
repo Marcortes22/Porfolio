@@ -40,7 +40,6 @@
   "secctions": [
     {
       "aboutMeSection": {
-        "image": "@Assets/Diplomado.jpg",
         "title": "Marco Cortés Castillo",
         "paragraphs": [
           "Soy un <strong class='text-blue-700 dark:text-orange-500'>joven y apasionado</strong> estudiante de último año de <strong class='text-green-700 dark:text-blue-500'>Ingeniería en Sistemas de Información</strong>, con un fuerte interés en el desarrollo, tanto <strong class='text-purple-500 dark:text-orange-500'>frontend</strong> como <strong class='text-indigo-700 dark:text-orange-500'>backend</strong>. Me considero una persona <strong class='text-orange-700 dark:text-violet-500'>autodidacta</strong>, con una gran capacidad de <strong class='text-blue-700 dark:text-orange-500'>pensamiento crítico</strong> y resolución de problemas. Me encanta <strong class='text-green-700 dark:text-blue-500'>explorar nuevas tecnologías</strong>, construir <strong class='text-orange-700 dark:text-orange-500'>soluciones innovadoras</strong> y aprender de cada <span class='bg-gray-200 dark:bg-gray-700 px-1 rounded'>desafío que enfrento</span>.",
