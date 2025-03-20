@@ -1,6 +1,5 @@
 ---
 import '@Styles/global.css';
-import background from '../assets/backGrounds/darkBackground.svg';
 import getTranslation from '@Helpers/getTranslation';
 import NavBar from '@Components/Astro/NavBar/NavBar.astro';
 import FooterPage from '@Components/Astro/FooterPage/FooterPage.astro';
@@ -77,7 +76,7 @@ const navLinksVisible = Astro.url.pathname.includes('/project') ? false : true;
 
     <img
       class="fixed hidden top-0 left-0 size-full -z-10 blur-2xl opacity-100 dark:block"
-      src={background.src}
+      src="/backGrounds/darkBackground.svg"
       alt="background image"
       fetchpriority="high"
     />

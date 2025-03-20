@@ -1,6 +1,6 @@
 import { c as createComponent, a as createAstro, d as renderComponent, e as createTransitionScope, r as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../../../chunks/astro/server_DpUHH7pj.mjs';
 import 'kleur/colors';
-import { g as getTranslation, a as getRelativeLocaleUrl, $ as $$Layout, b as $$ShinyButton } from '../../../chunks/ShinyButton_BcaAOQ64.mjs';
+import { g as getTranslation, a as getRelativeLocaleUrl, $ as $$Layout, b as $$ShinyButton } from '../../../chunks/ShinyButton_BJE45UjX.mjs';
 import { $ as $$Carousel } from '../../../chunks/Carousel_CfWFFA9U.mjs';
 /* empty css                                       */
 export { renderers } from '../../../renderers.mjs';
