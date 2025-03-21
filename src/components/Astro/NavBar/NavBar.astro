@@ -6,7 +6,7 @@ export const prerender = true;
 const { pathname } = Astro.url;
 const currentLocale = getTranslation(pathname);
 const root = Astro.currentLocale === 'en' ? '/en' : '/';
-console.log(Astro.currentLocale);
+
 const { nav } = currentLocale;
 
 interface Props {
@@ -14,6 +14,7 @@ interface Props {
 }
 
 const { visible } = Astro.props;
+console.log(visible);
 ---
 
 <header
@@ -28,7 +29,7 @@ const { visible } = Astro.props;
 
   <nav
     id="navbar"
-    class=`hidden transition-transform p-4 sm:${visible === true ? 'block' : 'hidden'} sm:translate-y-0 sm:static sm:p-0 w-full sm:w-auto text-sm lg:text-base`
+    class=`hidden transition-transform p-4 ${visible === true ? 'sm:block' : 'sm:hidden'} sm:translate-y-0 sm:static sm:p-0 w-full sm:w-auto text-sm lg:text-base`
   >
     <ul
       class="flex flex-col items-center gap-4 lg:gap-8 border border-dashed border-gray-500 rounded-md font-semibold text-gray-500 p-4 sm:p-2 sm:border-none sm:flex-row text-[16px]"
