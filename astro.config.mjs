@@ -10,6 +10,9 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
   integrations: [react(), analogjsangular()],
+  experimental: {
+    svg: true,
+  },
 
   vite: {
     plugins: [tailwindcss()],

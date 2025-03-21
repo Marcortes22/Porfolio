@@ -2,6 +2,7 @@
 import ChangeThemeButton from '@Components/React/ChangeThemeButton/ChangeThemeButton';
 import getTranslation from 'src/helpers/getTranslation';
 import ChangeLanguageSelect from '@Components/React/ChangeLanguageSelect/ChangeLanguageSelect';
+import MenuDrawer from '@Components/Astro/MenuDrawer/MenuDrawer.astro';
 export const prerender = true;
 const { pathname } = Astro.url;
 const currentLocale = getTranslation(pathname);
@@ -20,12 +21,19 @@ console.log(visible);
 <header
   class="fixed top-0 left-0 right-0 h-[64px] min-h-[64px] w-[100%] flex flex-wrap justify-between py-1 px-4 sm:px-6 items-center z-50 border border-gray-300 dark:border-neutral-800 rounded bg-gray-100 dark:bg-violet-950"
 >
-  <ChangeThemeButton client:only="react">
-    <div role="status" slot="fallback" class="w-[40px] h-[20px] animate-pulse">
-      <div class="h-full w-full bg-gray-200 rounded-full dark:bg-gray-700">
+  <div class="flex items-center justify-center gap-4">
+    <MenuDrawer />
+    <ChangeThemeButton client:only="react">
+      <div
+        role="status"
+        slot="fallback"
+        class="w-[40px] h-[20px] animate-pulse"
+      >
+        <div class="h-full w-full bg-gray-200 rounded-full dark:bg-gray-700">
+        </div>
       </div>
-    </div>
-  </ChangeThemeButton>
+    </ChangeThemeButton>
+  </div>
 
   <nav
     id="navbar"

@@ -1,0 +1,68 @@
+---
+export const prerender = true;
+import getTranslation from 'src/helpers/getTranslation';
+const { pathname } = Astro.url;
+const currentLocale = getTranslation(pathname);
+const { nav } = currentLocale;
+---
+
+<!-- drawer init and toggle -->
+<div class="text-center sm:hidden">
+  <button
+    class="overflow-y-auto focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-1 py-1 cursor-pointer"
+    type="button"
+    data-drawer-target="drawer-top-example"
+    data-drawer-show="drawer-top-example"
+    data-drawer-placement="top"
+    aria-controls="drawer-top-example"
+  >
+    <svg
+      class="w-6 h-6 text-gray-800 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-width="2"
+        d="M5 7h14M5 12h14M5 17h14"></path>
+    </svg>
+  </button>
+</div>
+
+<!-- drawer component -->
+<div
+  id="drawer-top-example"
+  class="fixed top-0 left-0 right-0 z-40 w-full p-2 transition-transform -translate-y-full bg-white dark:bg-gray-800"
+  tabindex="-1"
+  aria-labelledby="drawer-top-label"
+>
+  <nav
+    id="navbar"
+    class=` transition-transform p-4  sm:translate-y-0 sm:static sm:p-0 w-full sm:w-auto text-sm lg:text-base`
+  >
+    <ul
+      class="flex items-center gap-4 justify-center font-semibold text-gray-500 text-[16px]"
+    >
+      {
+        nav.navLinks.map((navItem, i) => (
+          <li
+            data-drawer-hide="drawer-top-example"
+            aria-controls="drawer-top-example"
+          >
+            <a
+              href={navItem.hash}
+              class="hover:text-gray-950 dark:hover:text-white dark:text-gray-400"
+            >
+              {navItem.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</div>
