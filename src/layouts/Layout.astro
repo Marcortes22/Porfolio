@@ -68,11 +68,11 @@ const navLinksVisible = Astro.url.pathname.includes('/project') ? false : true;
     id="home"
     class="flex flex-col items-center text-black dark:bg-gray-950 dark:text-white h-full m-0 w-full"
   >
-    <NavBar visible={navLinksVisible} transition:persist />
+    <NavBar visible={navLinksVisible} />
     <main class="grow sm:w-[85%] w-[95%] mt-[64px]">
       <slot />
     </main>
-    <FooterPage transition:persist />
+    <FooterPage />
 
     <img
       class="fixed hidden top-0 left-0 size-full -z-10 blur-2xl opacity-100 dark:block"
@@ -80,12 +80,6 @@ const navLinksVisible = Astro.url.pathname.includes('/project') ? false : true;
       alt="background image"
       fetchpriority="high"
     />
-    <!-- <img
-      class="fixed top-0 left-0 -z-10 blur-sm size-full dark:hidden"
-      src={background.src}
-      alt="background image"
-      fetchpriority="high"
-    /> -->
   </body><script
     is:inline
     src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
