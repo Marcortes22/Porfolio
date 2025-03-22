@@ -117,7 +117,44 @@
             "links": {
               "frontend": "https://github.com/Marcortes22/FrontEndTaskManager",
               "backend": "https://github.com/Marcortes22/BackEndTaskManager",
-              "demo": "https://www.marcortes.dev/"
+              "demo": "https://www.taskmanager.marcortes.dev/"
+            }
+          },
+          {
+            "title": "Sistema de RRHH para Municipalidad",
+            "myRole": "Desarrollador Backend",
+            "tecnicDescription": {
+              "title": "Descripción técnica",
+              "description": "Sistema web desarrollado para la Municipalidad de Carmona, Nandayure, Costa Rica, con el objetivo de optimizar la gestión de empleados, departamentos y procesos administrativos del departamento de Recursos Humanos. El backend fue construido con NestJS, utilizando MySQL como base de datos y TypeScript para garantizar un desarrollo tipado y escalable. Además, se integró la API de Google Drive para el almacenamiento seguro de documentos de empleados, permitiendo que cada usuario solo pueda acceder a sus propios archivos. El frontend fue desarrollado con Next.js y TypeScript.",
+              "itemsDescription": [
+                "Backend: NestJS, MySQL, TypeScript",
+                "Frontend: Next.js, TypeScript",
+                "Integraciones: API de Google Drive para almacenamiento de documentos"
+              ]
+            },
+            "useDescription": {
+              "title": "Descripción de la aplicación",
+              "description": "El sistema permite a la Municipalidad gestionar empleados, departamentos y posiciones laborales. También facilita la administración de solicitudes de vacaciones, constancias salariales y boletas de pago. Los usuarios del sistema tienen roles diferenciados, incluyendo TI, Recursos Humanos, Alcalde y Vicealcalde, cada uno con permisos específicos según sus responsabilidades.",
+              "itemsDescription": [
+                "Gestión de empleados: Creación, edición y administración de datos de empleados.",
+                "Manejo de departamentos y posiciones laborales.",
+                "Gestión de solicitudes: Permite a los empleados solicitar vacaciones y constancias salariales.",
+                "Generación y administración de boletas de pago.",
+                "Almacenamiento seguro de documentos en Google Drive con acceso restringido por usuario."
+              ]
+            },
+            "technologies": [
+              "NestJS",
+              "MySQL",
+              "TypeScript",
+              "Next.js",
+              "React"
+            ],
+            "images": ["/projectImages/taskManager/taskManager1.webp"],
+            "links": {
+              "backend": "URL_DEL_REPOSITORIO_BACKEND",
+              "frontend": "URL_DEL_REPOSITORIO_FRONTEND",
+              "demo": "URL_DEMO_SI_EXISTE"
             }
           }
         ]

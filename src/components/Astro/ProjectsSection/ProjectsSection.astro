@@ -23,17 +23,19 @@ const { projectsSection } = secctions[1];
           <a href={`${singleProjectUrl}${index}`}>
             <article
               data-key={index}
-              class="max-w-[350px]  flex flex-col items-center justify-center gap-4  rounded-lg border border-gray-300 dark:border-neutral-800 cursor-pointer dark:hover:bg-gray-800 p-1"
+              class="w-[350px] h-[340px]  flex flex-col items-center justify-between gap-2  rounded-lg border border-gray-300 dark:border-neutral-800 cursor-pointer dark:hover:bg-gray-800 hover:bg-gray-200 p-1"
             >
+              {/* <div class="flex flex-col grow-1"> */}
               <img
                 src={project.images[0]}
                 alt={project.title}
-                class="h-full w-full object-contain  rounded-lg"
+                class="h-fit w-full object-contain  rounded-lg"
               />
               <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 cursor-default">
                 {project.title}
               </h3>
-              <div class="m-4">
+              {/* </div> */}
+              <div class="m-4 ">
                 <div class="flex flex-wrap items-center justify-center gap-6">
                   {project.technologies.map((technoligy, index) => (
                     <img
