@@ -116,6 +116,10 @@
               "frontend": "https://github.com/Marcortes22/FrontEndTaskManager",
               "backend": "https://github.com/Marcortes22/BackEndTaskManager",
               "demo": "https://www.taskmanager.marcortes.dev/"
+            },
+            "demoCredentials": {
+              "email": "demo@gmail.com",
+              "password": "Demo123456"
             }
           },
           {
@@ -162,6 +166,10 @@
               "backend": "https://github.com/Marcortes22/NandayureBackend",
               "frontend": "https://github.com/JosePabloSG/NandayureFrontend",
               "demo": "https://rrhh-nandayure.vercel.app"
+            },
+            "demoCredentials": {
+              "email": "5045106778",
+              "password": "#Desarrollo"
             }
           }
         ]

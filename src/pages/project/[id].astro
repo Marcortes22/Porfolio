@@ -51,6 +51,12 @@ import ShinyButton from '@Components/Astro/ShinyButton/ShinyButton.astro';
                 buttonIcon={'/socialMediaIcons/github-dark.svg'}
               />
             </div>
+            <div class="w-full justify-center flex ">
+              <div class="flex flex-col gap-5 border rounded border-gray-200 dark:border-violet-900 p-5 ">
+                <p>Usuario: {project.demoCredentials.email}</p>
+                <p>Contraseña: {project.demoCredentials.password}</p>
+              </div>
+            </div>
             <div />
           </div>
           <div class="flex flex-col flex-1 w-full  items-center justify-center mb-[64px] ">
