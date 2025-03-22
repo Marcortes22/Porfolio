@@ -104,7 +104,8 @@
               "TypeScript",
               "dotnet",
               "auth0",
-              "postgresql"
+              "postgresql",
+              "mui"
             ],
             "images": [
               "/projectImages/taskManager/taskManager1.webp",
@@ -148,13 +149,22 @@
               "MySQL",
               "TypeScript",
               "Next.js",
-              "React"
+              "React",
+              "tailwindcss"
             ],
-            "images": ["/projectImages/taskManager/taskManager1.webp"],
+            "images": [
+              "/projectImages/municipality/municipality1.webp",
+              "/projectImages/municipality/municipality2.webp",
+              "/projectImages/municipality/municipality3.webp",
+              "/projectImages/municipality/municipality4.webp",
+              "/projectImages/municipality/municipality5.webp",
+              "/projectImages/municipality/municipality6.webp",
+              "/projectImages/municipality/municipality7.webp"
+            ],
             "links": {
-              "backend": "URL_DEL_REPOSITORIO_BACKEND",
-              "frontend": "URL_DEL_REPOSITORIO_FRONTEND",
-              "demo": "URL_DEMO_SI_EXISTE"
+              "backend": "https://github.com/Marcortes22/NandayureBackend",
+              "frontend": "https://github.com/JosePabloSG/NandayureFrontend",
+              "demo": "https://rrhh-nandayure.vercel.app"
             }
           }
         ]

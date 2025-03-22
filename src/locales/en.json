@@ -101,7 +101,8 @@
               "TypeScript",
               "dotnet",
               "auth0",
-              "postgresql"
+              "postgresql",
+              "mui"
             ],
             "images": [
               "/projectImages/taskManager/taskManager1.webp",
@@ -114,7 +115,53 @@
             "links": {
               "frontend": "https://github.com/Marcortes22/FrontEndTaskManager",
               "backend": "https://github.com/Marcortes22/BackEndTaskManager",
-              "demo": "https://www.marcortes.dev/"
+              "demo": "https://www.taskmanager.marcortes.dev/"
+            }
+          },
+          {
+            "title": "HR System for Municipality",
+            "myRole": "Backend Developer",
+            "tecnicDescription": {
+              "title": "Technical Description",
+              "description": "Web system developed for the Municipality of Carmona, Nandayure, Costa Rica, aimed at optimizing the management of employees, departments, and administrative processes within the Human Resources department. The backend was built using NestJS, with MySQL as the database and TypeScript to ensure a strongly typed and scalable development. Additionally, the Google Drive API was integrated for secure storage of employee documents, allowing each user to access only their own files. The frontend was developed with Next.js and TypeScript.",
+              "itemsDescription": [
+                "Backend: NestJS, MySQL, TypeScript",
+                "Frontend: Next.js, TypeScript",
+                "Integrations: Google Drive API for document storage"
+              ]
+            },
+            "useDescription": {
+              "title": "Application Description",
+              "description": "The system allows the Municipality to manage employees, departments, and job positions. It also facilitates the administration of vacation requests, salary certificates, and pay stubs. System users have differentiated roles, including IT, Human Resources, Mayor, and Deputy Mayor, each with specific permissions based on their responsibilities.",
+              "itemsDescription": [
+                "Employee management: Creation, editing, and administration of employee data.",
+                "Handling of departments and job positions.",
+                "Request management: Allows employees to request vacations and salary certificates.",
+                "Generation and administration of pay stubs.",
+                "Secure document storage in Google Drive with user-restricted access."
+              ]
+            },
+            "technologies": [
+              "NestJS",
+              "MySQL",
+              "TypeScript",
+              "Next.js",
+              "React",
+              "tailwindcss"
+            ],
+            "images": [
+              "/projectImages/municipality/municipality1.webp",
+              "/projectImages/municipality/municipality2.webp",
+              "/projectImages/municipality/municipality3.webp",
+              "/projectImages/municipality/municipality4.webp",
+              "/projectImages/municipality/municipality5.webp",
+              "/projectImages/municipality/municipality6.webp",
+              "/projectImages/municipality/municipality7.webp"
+            ],
+            "links": {
+              "backend": "https://github.com/Marcortes22/NandayureBackend",
+              "frontend": "https://github.com/JosePabloSG/NandayureFrontend",
+              "demo": "https://rrhh-nandayure.vercel.app"
             }
           }
         ]
