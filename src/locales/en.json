@@ -63,7 +63,7 @@
         ],
         "myCV": {
           "name": "My CV",
-          "link": "/CV/MarcoCortesCV.pdf",
+          "link": "/cv/spanishCV.pdf",
           "icon": "/socialMediaIcons/pdf.svg"
         }
       }
