@@ -74,6 +74,7 @@
     {
       "projectsSection": {
         "sectionTitle": "Proyectos",
+        "viewMoreButton": "Ver Más",
         "projects": [
           {
             "title": "Clon de Microsoft To Do",

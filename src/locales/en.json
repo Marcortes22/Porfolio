@@ -71,6 +71,7 @@
     {
       "projectsSection": {
         "sectionTitle": "Projects",
+        "viewMoreButton": "View More",
         "projects": [
           {
             "title": "Microsoft To Do Clone",
@@ -123,7 +124,7 @@
             }
           },
           {
-            "title": "HR System for Municipality",
+            "title": "RRHH System for Municipality",
             "myRole": "Backend Developer",
             "tecnicDescription": {
               "title": "Technical Description",
