@@ -63,7 +63,7 @@
         ],
         "myCV": {
           "name": "My CV",
-          "link": "/cv/spanishCV.pdf",
+          "link": "/cv/englishCV.pdf",
           "icon": "/socialMediaIcons/pdf.svg"
         }
       }
