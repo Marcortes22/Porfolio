@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-
+//test
 @Component({
   selector: 'app-hello',
   standalone: true, // 🔹 Define que es un componente standalone
